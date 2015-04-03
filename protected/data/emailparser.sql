@@ -4,4 +4,5 @@ CREATE TABLE tbl_email (
   email TEXT,
   dateInsert DATETIME
 )  ENGINE=InnoDB CHARACTER SET=UTF8;
-INSERT INTO tbl_email
+#INSERT INTO tbl_email (site, email, dateInsert) VALUES ('example', 'test@test.ru', now());
+
