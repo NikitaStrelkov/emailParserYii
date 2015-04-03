@@ -84,7 +84,7 @@ class EmailController extends Controller
      * @param $url
      * @return array()
      */
-    private function getEmails ($url) {
+    private function getEmailsFromSite($url) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url); // отправляем на
         curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -99,7 +99,7 @@ class EmailController extends Controller
      * @param $url
      * @return mixed
      */
-    private function getEmailsFromDB ($url) {
+    private function getEmailsFromDB($url) {
         $emailRows = Yii::app()->db->createCommand()
             ->select('*')
             ->from('tbl_email')
@@ -125,7 +125,7 @@ class EmailController extends Controller
             $url = $_POST["Email"]['site'];
             $emails = $this->getEmailsFromDB($url);
             if (empty($emails)) {
-                $emails = $this->getEmails($url);
+                $emails = $this->getEmailsFromSite($url);
                 foreach ($emails as $email) {
                     if (!in_array($email, $insertedEmails)) {
                         $command = Yii::app()->db->createCommand();
