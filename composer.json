@@ -1,0 +1,12 @@
+{
+    "name": "strelkov/emailparser.test",
+    "require": {
+        "yiisoft/yii": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "NikitaStrelkov",
+            "email": "nikita.strelkov@gmail.com"
+        }
+    ]
+}
