@@ -1,0 +1,9 @@
+DROP DATABASE IF EXISTS `emailparserdb`;
+CREATE DATABASE `emailparserdb`;
+USE `emailparserdb`;
+CREATE TABLE tbl_email (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  site TEXT,
+  email TEXT,
+  dateInsert DATETIME
+)  ENGINE=InnoDB CHARACTER SET=UTF8;
